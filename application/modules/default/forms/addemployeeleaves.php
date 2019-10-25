@@ -57,10 +57,14 @@ class Default_Form_addemployeeleaves extends Zend_Form
 			$businessunit_id = new Zend_Form_Element_Hidden('businessunit_id');
 			$department_id = new Zend_Form_Element_Hidden('department_id');
 			$user_id = new Zend_Form_Element_Hidden('user_id');
+
+			//minor validation for convinence
 			$emp_leave_limit->setRequired(true);
         	$emp_leave_limit->addValidator('NotEmpty', false, array('messages' => 'Please enter leave limit for current year.'));
 		}
 
+		//following regular expression is responsible for checking whole number from 0-100
+		//
 		//
 		// $emp_leave_limit->addValidator("regex",true,array(
 		//

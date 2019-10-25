@@ -38,8 +38,14 @@ class Default_Form_empleaves extends Zend_Form
     $emp_leave_limit->addFilter(new Zend_Filter_StringTrim());
 
 
+
+		//donot leave empty minor validation
 		$emp_leave_limit->setRequired(true);
     $emp_leave_limit->addValidator('NotEmpty', false, array('messages' => 'Please enter leave limit for current year.'));
+
+
+		// employee validation is opted
+		// following code is checking between 0-100 only whole number
 
 		// $emp_leave_limit->addValidator("regex",true,array(
 		//
