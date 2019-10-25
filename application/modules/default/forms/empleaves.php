@@ -62,7 +62,7 @@ class Default_Form_empleaves extends Zend_Form
         $used_leaves->setAttrib('onfocus', 'this.blur()');
 
 		$alloted_year = new Zend_Form_Element_Text('alloted_year');
-        $alloted_year->setAttrib('maxLength', 4);
+        $alloted_year->setAttrib('maxLength', 4);// entry length is increased from 3 to 4 // values can be entered as 1, 1.5, -0.5, and -.5 
 		$alloted_year->setAttrib('readonly', 'true');
 		$alloted_year->setAttrib('onfocus', 'this.blur()');
 

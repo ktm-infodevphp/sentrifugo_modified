@@ -77,7 +77,7 @@ class Default_Form_addemployeeleaves extends Zend_Form
 
 		$alloted_year = new Zend_Form_Element_Text('alloted_year');
 		$alloted_year->setLabel("Year");
-        $alloted_year->setAttrib('maxLength', 4);
+        $alloted_year->setAttrib('maxLength', 4); // entry length is increased from 3 to 4 // values can be entered as 1, 1.5, -0.5, and -.5 
 		$alloted_year->setAttrib('disabled', 'disabled');
 		$alloted_year->setAttrib('onfocus', 'this.blur()');
 
